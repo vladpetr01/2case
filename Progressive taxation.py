@@ -2,18 +2,18 @@ import rulocal as ru
 
 print(ru.choice_type_family, '\n 1.', ru.type_family_1, '2.', ru.type_family_2, '3.', ru.type_family_3)
 type_family = input()
-JAN = 'Январь'
-FAB = 'Февраль'
-MAR = 'Март'
-APR = 'Апрель'
-MAY = 'Май'
-JUN = 'Июнь'
-JUL = 'Июль'
-AUG = 'Август'
-SEP = 'Сентябрь'
-OCT = 'Октябрь'
-NOV = 'Ноябрь'
-DEC = 'Декабрь'
+JAN = ru.January
+FAB = ru.February
+MAR = ru.March
+APR = ru.April
+MAY = ru.May
+JUN = ru.June
+JUL = ru.July
+AUG = ru.August
+SEP = ru.September
+OCT = ru.October
+NOV = ru.November
+DEC = ru.December
 name_month = [JAN, FAB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC]
 annual_income = 0
 for month in range(12):
@@ -74,4 +74,4 @@ elif type_family == '3':
     elif 432201 <= annual_income:
         tax = 0.1 * 12950 + 0.15 * (49400 - 12950) + 0.25 * (127550 - 49400) + 0.28 * (206600 - 127550) + \
               0.33 * (405100 - 206600) + 0.35 * (432200 - 405100) + 0.396 * (annual_income - 432200)
-print('Сумма налога составит:', tax, '$')
+print(ru.The_amount_of_tax_will_be, tax, '$')
