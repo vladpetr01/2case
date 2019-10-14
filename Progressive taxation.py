@@ -1,7 +1,14 @@
+#Case-study №2
+#Developers:   Mauter A. (50%)
+#              Kuzmin E. (40%)
+#              Petrov V. (50%)
 import rulocal as ru
 
+#Which family type.
 print(ru.choice_type_family, '\n 1.', ru.type_family_1, '2.', ru.type_family_2, '3.', ru.type_family_3)
 type_family = input()
+
+#Write the salary for the all mounth.
 JAN = ru.January
 FAB = ru.February
 MAR = ru.March
@@ -20,6 +27,8 @@ for month in range(12):
     print('{} {}:'.format(ru.Question, name_month[month], end=''))
     income = float(input())
     annual_income += income
+  
+#Tax for the single people.
 if type_family == '1':
     if 0 < annual_income <= 9075:
         tax = 0.1 * annual_income
@@ -38,6 +47,8 @@ if type_family == '1':
     elif 406751 <= annual_income:
         tax = 0.1 * 9075 + 0.15 * (36900 - 9075) + 0.25 * (89350 - 36900) + 0.28 * (186350 - 89350) + \
               0.33 * (405100 - 186350) + 0.35 * (406750 - 405100) + 0.396 * (annual_income - 406750)
+        
+#Tax for the married.
 elif type_family == '2':
     if 0 < annual_income <= 18150:
         tax = 0.1 * annual_income
@@ -56,6 +67,8 @@ elif type_family == '2':
     elif 457600 <= annual_income:
         tax = 0.1 * 18150 + 0.15 * (73800 - 18150) + 0.25 * (148850 - 73800) + 0.28 * (226850 - 148850) + \
               0.33 * (405100 - 226850) + 0.35 * (457600 - 405100) + 0.396 * (annual_income - 457600)
+
+#Tax for the single parrent.
 elif type_family == '3':
     if 0 < annual_income <= 12950:
         tax = 0.1 * annual_income
